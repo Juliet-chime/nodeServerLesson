@@ -1,11 +1,5 @@
 
-const userDB = {
-    users : require('../data/users.json'), 
-    setUsers : function(data){this.users = data}
-}
-
-const fsPromises = require('fs').promises
-const path = require('path') 
+const User = require('../model/user')
 const bcrypt = require('bcrypt') 
 
 const handleNewUser = async (req, res) => {
@@ -15,8 +9,8 @@ const handleNewUser = async (req, res) => {
     if(!user || !pwd){
        return res.status(400).json({message: 'Username and password is required'})
     }  
-    
-    const duplicate = userDB.users.find((item)=>item.username === user)
+    //find duplicate user with mongoose
+    const duplicate = await User.findOne({username:user}).exec()
 
     if(duplicate){
        return res.status(409).json({message:'user already exist'})
@@ -24,17 +18,16 @@ const handleNewUser = async (req, res) => {
 
     try{
           const hashpassword = await bcrypt.hash(pwd,10)
+          //create and store new user with mongoose
+          const result = await User.create({
+            "username":user,
+            "password":hashpassword
+        } )  
 
-          const newUser = {username:user,password:hashpassword}  
-
-          userDB.setUsers([...userDB.users,newUser])
-
-          await fsPromises.writeFile(path.join(__dirname,'..','data','users.json'),JSON.stringify(userDB.users )) 
-
-          res.status(201).json({success: `new user ${user} created `})
+          res.status(201).json({success: `new user ${user} created `,result})
 
     } catch(err){
-        res.status(500).json({message:err.message})
+         res.status(500).json({message:err.message})
     }
 }
 

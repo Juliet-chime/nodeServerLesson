@@ -1,1 +1,46 @@
-[{"username":"walt1","password":"$2b$10$JF8uCEl0WqHm303WhfssqeHFaevoG9uN2ITnTQJT1n4bbedF/j3a2"},{"username":"walt16","password":"$2b$10$klmCC8iGrgQC.Sqaqwr22.0n7A3.0CV/eperIbwQWyPOLdva10StS"},{"username":"walt169","password":"$2b$10$rAvGJEm4pQKz3YewHVXuhuNTKuDpl02WbfL1diYPe3oup9eoYBp/6"},{"username":"walt1699","password":"$2b$10$17Mb.BPrIqdm0qcfBz2TfOl5dY5EBPdahN90fk3pRF/HysTbRRhza"}]
+[
+    {
+        "username": "walt1",
+        "password": "$2b$10$JF8uCEl0WqHm303WhfssqeHFaevoG9uN2ITnTQJT1n4bbedF/j3a2"
+    },
+    {
+        "username": "walt16",
+        "password": "$2b$10$klmCC8iGrgQC.Sqaqwr22.0n7A3.0CV/eperIbwQWyPOLdva10StS"
+    },
+    {
+        "username": "walt1699",
+        "roles": {
+            "user": 2001
+        },
+        "password": "$2b$10$17Mb.BPrIqdm0qcfBz2TfOl5dY5EBPdahN90fk3pRF/HysTbRRhza",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHQxNjk5IiwiaWF0IjoxNjg4MDY1MjQzLCJleHAiOjE2ODgxNTE2NDN9.0DTGLCZvlsMnjGtNtBU85Pawazxl2boN1aHvtGQ7AWg"
+    },
+    {
+        "username": "walt169",
+        "roles": {
+            "editor": 1894,
+            "user": 2001,
+            "admin": 5150
+        },
+        "password": "$2b$10$rAvGJEm4pQKz3YewHVXuhuNTKuDpl02WbfL1diYPe3oup9eoYBp/6",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHQxNjkiLCJpYXQiOjE2ODgyNDMwMzUsImV4cCI6MTY4ODMyOTQzNX0.M8db8I5mMXELkXAMW9NsL7nBAKbwYRQtFZmBH9LJCw4"
+    },
+    {
+        "username": "walt1699d",
+        "roles": {
+            "editor": 1894,
+            "user": 2001
+        },
+        "password": "$2b$10$UjSPcMcJCvJO6Q/zaHophe9JwsJrhRMiAzfb1A5qL9.i3hXO1mXW.",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHQxNjk5ZCIsImlhdCI6MTY4ODMxMDg2OSwiZXhwIjoxNjg4Mzk3MjY5fQ.Pp7qY4PdfjHiA-KeZqeyUFgXaVZiqdGUS590lXQt_34"
+    },
+    {
+        "username": "walt1699de",
+        "roles": {
+            "user": 2001,
+            "admin": 5150
+        },
+        "password": "$2b$10$FTI3sJRwKFyTdqoK4eTlTugxQzYQ5LytEz5W.cftXibJGgejw6No2",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHQxNjk5ZGUiLCJpYXQiOjE2ODgzMTE2OTAsImV4cCI6MTY4ODM5ODA5MH0.Z2DAsk4WsRlchRYTn_h41DhydWohiQPRJCoIf_skiMc"
+    }
+]

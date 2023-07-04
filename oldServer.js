@@ -12,14 +12,10 @@ const myEmitter = new Emitter()
 const PORT = 3500
 
 const paths = path.join(__dirname,'views','logEvents.js')
-console.log(paths,'jhsshjk')
 
 const server = http.createServer((req,res)=>{
-    console.log(req.url,req.method)
 
     const ext = path.extname(req.url)
-    console.log(ext,'yuioyu')
-
 
     let contentType;
 
@@ -46,8 +42,6 @@ const server = http.createServer((req,res)=>{
                                     contentType='text/html  '
     }
 
-    console.log(req.url.slice(-1),'slice')
-
     let filepath = contentType='text/html' && req.url === '/' ? 
     path.join(__dirname,'views','logEvents')
     :contentType='text/html' && req.url.slice(-1) === '/' ? path.join(__dirname,'views',req.url,'logEvents') : path.join(__dirname,req.url)
@@ -57,9 +51,6 @@ const server = http.createServer((req,res)=>{
     if(!ext && req.url.slice(-1) !== '/' ) console.log(filepath)
 
     const fileExist = fs.existsSync(filepath)
-
-    console.log(fileExist)
-    console.log(path.parse(filepath).base)
 })
 
 server.listen(PORT,()=>{
